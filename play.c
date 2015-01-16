@@ -1,40 +1,19 @@
 #include <stdio.h>
-
-
-void d_to_b(n)
-{
-	int bit, ret;
-
-	bit = n % 2;
-	ret = n / 2;
-	
-	if (n < 2)
-	{
-		printf("1");
-		return;
-	} else {
-		d_to_b(ret);
-	}
-	printf("%d", bit);
-
-}
-
-void d_to_b2(n)
-{
-	int r;
-
-	r = n % 2;
-	if (n >= 2)
-	{
-		d_to_b2(n/2);
-	}
-	printf("%d", r);
-}
+#include <stdlib.h>
 
 int main(int argc, char const *argv[])
 {
-	d_to_b(2554);
-	// d_to_b2(6);
-	return 0;
-}
+    
+    void *ptd;
 
+    ptd = (double *)malloc(99999999999999 * sizeof(double));
+
+    if (ptd == NULL)
+    {
+        printf("NULL\n");
+    }
+
+    printf("%p\n", ptd);
+
+    return 0;
+}
